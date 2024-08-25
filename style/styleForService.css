@@ -1,0 +1,84 @@
+div#Service {
+  padding: 60px 0 80px 0;
+}
+div#Service main h1 {
+  padding-bottom: 30px;
+  color: #fc2505;
+}
+div#Service main {
+  display: flex;
+  gap: 15px;
+  padding: 0 10px;
+  /* padding-top: 150px; */
+}
+
+div.serviceCardContainer {
+  max-width: 300px;
+  height: 210px;
+  background-color: #a6acc9;
+  background-image: linear-gradient(
+    /* 180deg, */ #2a50e7 10%,
+    #250706 46%,
+    #6164e3 100%
+  );
+  border-radius: 8px;
+  color: white;
+  overflow: hidden;
+  position: relative;
+  perspective: 1000px;
+
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+div.serviceCardContainer:hover {
+  background-image: linear-gradient(
+    /* 180deg, */ #0b0d17 10%,
+    #0f27ff 46%,
+    #0b0b1f 100%
+  );
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+div.serviceCardContainer div {
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: white;
+  text-align: center;
+  height: 100%;
+}
+
+div.serviceCardContainer div h2 {
+  text-transform: uppercase;
+}
+
+div.serviceCardContainer div p {
+  line-height: 25px;
+  font-size: 19px;
+  color: #f9e910;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 400px) {
+  #Service main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 700px) {
+  #Service main h1 {
+    font-size: 25px;
+  }
+  #Service main div.serviceCardContainer h2 {
+    font-size: 15px;
+  }
+  #Service main div.serviceCardContainer p {
+    padding-top: 10px;
+    font-size: 15px;
+    line-height: 20px;
+  }
+}

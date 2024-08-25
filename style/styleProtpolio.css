@@ -1,0 +1,249 @@
+#Portfolio {
+  padding: 70px 0;
+}
+#Portfolio main div h1 {
+  padding: 0 10px;
+  padding-bottom: 20px;
+}
+.protpolioCradContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+  padding: 0 10px;
+}
+
+.card {
+  overflow: visible;
+  width: 350px;
+  height: 354px;
+}
+.content {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 300ms;
+  box-shadow: 0px 0px 10px 1px #000000ee;
+  border-radius: 5px;
+}
+
+.front,
+.back {
+  background-color: #151515;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.back {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.back::before {
+  position: absolute;
+  content: " ";
+  display: block;
+  width: 1000px;
+  height: 500%;
+  background: linear-gradient(90deg, #ff2233, #0d09e6, #30e930, #ff2233);
+  animation: color_card_border_rotation 2s infinite linear;
+}
+
+.back-content {
+  position: absolute;
+  width: 95%;
+  height: 95%;
+  background-color: #151515;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.card:hover .content {
+  transform: rotateY(180deg);
+}
+
+@keyframes color_card_border_rotation {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  0% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.front .front-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* cad contain styless
+
+
+*/
+.projectBgImageContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.projectBgImageContainer h4 {
+  background-color: #ff3903;
+  margin-bottom: 20px;
+  padding: 3px 8px;
+  width: 100%;
+  font-size: 20px;
+  min-height: 73px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.front div.frontContaint {
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+}
+
+.frontContaint p strong {
+  background-color: red;
+  padding: 3px 10px;
+  border-radius: 8px;
+}
+
+p.listOfTecnologies {
+  font-size: 22px;
+  line-height: 25px;
+  color: rgb(253, 0, 0);
+  font-weight: 600;
+  text-shadow: 0.25px 0 #e32525, 0.25px 0.25px 0 #f76d6d;
+}
+
+section.projectLinks {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+div.githublinkContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+div.githublinkContainer a {
+  padding: 7px 9px;
+  border: 1px solid;
+  text-decoration: none;
+  color: #ffff;
+}
+div.githublinkContainer a:hover {
+  background-color: #f90000;
+}
+
+.front {
+  transform: rotateY(180deg);
+  color: white;
+}
+a.projectDeployLink {
+  background-color: #ffff;
+  margin: auto;
+  padding: 12px;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 7px;
+}
+
+a.projectDeployLink:hover {
+  background-color: #f80202;
+  color: #ffff;
+  transition: all 0.25s ease-in;
+}
+@media screen and (max-width: 700px) {
+  #Portfolio {
+  }
+  #Portfolio main div h1 {
+    font-size: 25px;
+    font-weight: 600;
+  }
+  .protpolioCradContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    padding: 0 10px;
+  }
+  div.protpolioCradContainer .card {
+    max-width: 100px;
+  }
+  .card {
+    min-width: 260px;
+    height: 254px;
+  }
+  .projectBgImageContainer h4 {
+    font-size: 15px;
+  }
+  .front div.frontContaint {
+    gap: 23px;
+  }
+  a.projectDeployLink {
+    padding: 6px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  p.listOfTecnologies {
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+
+/* see more button  */
+
+div.seeMoreButton {
+  padding: 30px 30px 0 30px;
+}
+div.seeMoreButton button {
+  padding: 0.5rem 1rem;
+  font-size: 22px;
+  margin: auto;
+  display: block;
+  color: #f80202;
+  border-radius: 6px;
+  cursor: pointer;
+}
+div.seeMoreButton button:hover {
+  color: #ffff;
+  background-color: #f80202;
+}
+
+.extraProjectCard {
+  display: none;
+}
